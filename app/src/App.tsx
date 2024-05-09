@@ -9,6 +9,7 @@ const router = createBrowserRouter(routes);
 loadableReady(() => {
     let elem = document.querySelector("#root");
 
+    // на случай если сервер не сможет самостоятельно отрендерить всё, что нужно
     if (!elem || !window.SERVER_STATUS.success) {
         const script = document.createElement('script');
         const styles = document.createElement('link');

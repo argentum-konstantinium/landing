@@ -4,7 +4,7 @@
 import React, { useRef } from "react";
 import {DoubleSide, FrontSide, Mesh} from "three";
 
-import {useFrame, useThree} from "@react-three/fiber";
+import {useFrame} from "@react-three/fiber";
 
 export const Plane = () => {
   const reference = useRef<Mesh>();

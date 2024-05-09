@@ -1,11 +1,7 @@
 import {useEffect, useRef} from 'react';
 import {OBJLoader} from "three-stdlib";
-import {MeshStandardMaterial, ShaderMaterial, DoubleSide, Color, FrontSide, Mesh} from "three";
-import {useFrame, useLoader} from "@react-three/fiber";
-import {fragmentShader, vertexShader} from "@/constants/shaders/wireframe";
-const glslify = require('glslify');
-import frag from '@/constants/shaders/wireframe/wire.frag';
-import vert from '@/constants/shaders/wireframe/wire.vert';
+import {MeshStandardMaterial, DoubleSide} from "three";
+import {useLoader} from "@react-three/fiber";
 export interface HeadState {
     angleX: number;
     angleY: number;

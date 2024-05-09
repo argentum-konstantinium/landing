@@ -11,7 +11,7 @@ const Scene = () => {
         <color attach="background" args={['black']}/>
 
         <WolfHead/>
-        <ambientLight args={[0xFFFFFF]} intensity={1.0}/>
+        <ambientLight args={[0xFFFFFF]} intensity={2.0}/>
         <PerspectiveCamera position={[0, 0, 0]} makeDefault/>
         <Plane/>
 

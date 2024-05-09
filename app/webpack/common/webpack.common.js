@@ -3,9 +3,9 @@ const webpack = require("webpack");
 const ESLintPlugin = require("eslint-webpack-plugin");
 
 const LoadablePlugin = require('@loadable/webpack-plugin');
-const { ROOT_DIR, STAND } = process.env;
+const { ROOT_DIR, MODE } = process.env;
 
-const mode = STAND === "production" ? "production" : "development";
+const mode = MODE === "production" ? "production" : "development";
 
 const config = {
   devtool: "source-map",
@@ -22,13 +22,6 @@ const config = {
             cacheDirectory: true, // Using a cache to avoid of recompilation
           },
         },
-      },
-      {
-        test: /\.(glsl|frag|vert)$/,
-        use: [
-          require.resolve('raw-loader'),
-          require.resolve('glslify-loader'),
-        ]
       },
       {
         test: /\.((c|sa|sc)ss)$/i,

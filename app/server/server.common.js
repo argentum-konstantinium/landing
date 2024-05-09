@@ -6,7 +6,6 @@ const  { renderToString } = require('react-dom/server');
 const  fs = require('fs');
 const  { ChunkExtractor } = require('@loadable/server');
 const statsFile = path.resolve(__dirname, '../dist/client/loadable-stats.json')
-console.log(Root)
 
 function ssrMiddleware(req, res) {
         try {

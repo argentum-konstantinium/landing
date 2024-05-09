@@ -20,9 +20,9 @@ FROM ubuntu:24.04 AS build
 
 ARG UID=10001
 
-RUN mkdir /portfolio
-WORKDIR /portfolio
-COPY ./app /portfolio
+RUN mkdir /evolianium
+WORKDIR /evolianium
+COPY ./app /evolianium
 RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get install -y curl

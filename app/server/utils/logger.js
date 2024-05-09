@@ -1,7 +1,8 @@
 const SERVER = require("../../config/server.config");
+const chalk = require('chalk');
  const logger = (...args) => {
     if (process.env.STAND !== 'production') {
-        console.log(args, SERVER.loggerMessageColor)
+        console.log(chalk.blue(...args))
     }
 }
 
