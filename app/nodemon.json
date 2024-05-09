@@ -1,0 +1,6 @@
+{
+  "watch": ["server/*", "dist/ssr/*"],
+  "ext": "*",
+  "exec": "cross-env STAND=local-dev node --require ./env.js ./server/server.development.js",
+  "delay": 300
+}
